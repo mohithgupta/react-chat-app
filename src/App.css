@@ -291,6 +291,13 @@
 
 .logout-btn-div{
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top:5%;
+  right: 10%;
+}
+.logout-btn{
+  padding:5px 10px;
+  background-color: #7554a0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }

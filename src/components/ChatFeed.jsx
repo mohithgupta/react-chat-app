@@ -41,6 +41,12 @@ const ChatFeed = (props) => {
     });
   };
 
+  const handleLogout = () =>{
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    window.location.reload();
+  }
+
   if (!chat) return <div />;
 
   return (
@@ -56,7 +62,8 @@ const ChatFeed = (props) => {
       <div className="message-form-container">
         <MessageForm {...props} chatId={activeChat} />
       </div>
-      <div className="logout-btn-div"><button className="logout-btn">Logout</button></div>
+      <div className="logout-btn-div"><button onClick={handleLogout} className="logout-btn">Logout</button></div>
+
     </div>
   );
 };

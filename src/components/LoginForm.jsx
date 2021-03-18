@@ -9,11 +9,6 @@ const Modal = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    return () => {
-      alert("Please use the following credentials for testing. UserName : test , Password : test123")
-    }
-  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,6 +34,7 @@ const Modal = () => {
     <div className="wrapper">
       <div className="form">
         <h1 className="title">Chat Application</h1>
+        <p>for testing : UserName = test , password = test123 </p>
         <form onSubmit={handleSubmit}>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required />

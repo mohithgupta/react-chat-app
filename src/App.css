@@ -288,3 +288,9 @@
   opacity: 1;
   right: 0;
 }
+
+.logout-btn-div{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

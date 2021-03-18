@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import axios from 'axios';
+
 
 const projectID = 'b56eb07d-51d1-4bbc-97fc-fdaf7e353b25';
 
@@ -7,6 +8,12 @@ const Modal = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    return () => {
+      alert("Please use the following credentials for testing. UserName : test , Password : test123")
+    }
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +32,8 @@ const Modal = () => {
       setError('Oops, incorrect credentials.');
     }
   };
+
+  
 
   return (
     <div className="wrapper">

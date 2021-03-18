@@ -56,6 +56,7 @@ const ChatFeed = (props) => {
       <div className="message-form-container">
         <MessageForm {...props} chatId={activeChat} />
       </div>
+      <div className="logout-btn-div"><button className="logout-btn">Logout</button></div>
     </div>
   );
 };

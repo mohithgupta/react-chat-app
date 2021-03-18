@@ -6,7 +6,7 @@ import './App.css';
 const projectID = 'b56eb07d-51d1-4bbc-97fc-fdaf7e353b25';
 
 const App = () => {
-  
+
   if (!localStorage.getItem('username')) return <LoginForm />;
 
   return (
